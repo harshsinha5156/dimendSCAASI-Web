@@ -121,96 +121,101 @@ const GetInspired = () => {
 
      
         {/* ---------------- Explore Section (Desktop only) ---------------- */}
-<section className="hidden md:block w-full overflow-hidden py-6 md:py-12 font-['Arapey']">
+ <section className="hidden md:block w-full overflow-hidden py-6 md:py-12 font-['Arapey'] -mt-6 md:-mt-10">
 
-        {/* Progress Line */}
-        {isMobile ? (
-          <div className="relative mb-6 w-[200px] mx-auto h-[2px] bg-gray-200">
-            <div
-              ref={progressLineRef}
-              className="absolute top-0 left-0 h-full bg-black transition-all duration-300"
-              style={{ width: '0%' }}
-            ></div>
-          </div>
-        ) : (
-          <div className="relative mb-12 w-[calc(280px*4+24px*3)] mx-auto h-[2px] bg-gray-200">
-            <div
-              ref={progressLineRef}
-              className="absolute top-0 left-0 h-full bg-black transition-all duration-300"
-              style={{ width: '0%' }}
-            ></div>
-            <div className="absolute right-0 -top-3 flex gap-3">
-              <button
-                onClick={() => handleScroll('left')}
-                className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors duration-300"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
-                </svg>
-              </button>
-              <button
-                onClick={() => handleScroll('right')}
-                className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors duration-300"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        )}
+      {/* Heading */}
+     
 
-        {/* Scrollable Image Cards */}
-        <div className="w-full overflow-hidden">
-          <div
-            ref={scrollContainerRef}
-            className={`flex overflow-x-auto scroll-smooth hide-scrollbar ${
-              isMobile ? 'px-4' : 'px-8'
-            }`}
-            style={{
-              gap: isMobile ? '16px' : '24px',
-              scrollSnapType: isMobile ? 'x mandatory' : 'none',
-              paddingLeft: isMobile ? 'calc(50% - 100px)' : 'calc((100% - (280px*4 + 24px*3))/2)'
-            }}
-          >
-            {exploreItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 relative group"
-                style={{
-                  width: isMobile ? '200px' : '280px',
-                  height: isMobile ? '280px' : '450px',
-                  scrollSnapAlign: isMobile ? 'center' : 'none'
-                }}
-              >
-                <img
-                  src={process.env.PUBLIC_URL + item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center">
-                  <h3 className="font-['Arapey'] text-white text-sm md:text-lg tracking-widest uppercase drop-shadow-lg">
-                    {item.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
+      {/* Progress indicator line */}
+      {isMobile ? (
+        <div className="relative mb-6 w-[300px] mx-auto h-[2px] bg-gray-200">
+          <div 
+            ref={progressLineRef}
+            className="absolute top-0 left-0 h-full bg-black transition-all duration-300"
+            style={{ width: '0%' }}
+          />
+        </div>
+      ) : (
+        <div className="relative mb-12 w-[calc(290px*4+16px*3+80px)] mx-auto h-[2px] bg-gray-200">
+          <div 
+            ref={progressLineRef}
+            className="absolute top-0 left-0 h-full bg-black transition-all duration-300"
+            style={{ width: '0%' }}
+          />
+          <div className="absolute right-0 -top-3 flex gap-3">
+            <button 
+              onClick={() => handleScroll('left')}
+              className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button 
+              onClick={() => handleScroll('right')}
+              className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
         </div>
+      )}
 
-        <style jsx>{`
-          .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-          .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-        `}</style>
-      </section>
+      {/* Image container */}
+     <div className="w-full overflow-hidden">
+  <div 
+    ref={scrollContainerRef}
+    className={`flex scroll-smooth hide-scrollbar ${
+      isMobile 
+        ? "overflow-x-scroll mx-auto w-[300px]" 
+        : "overflow-hidden justify-center pl-[650px]" // 👈 desktop pe left side gap
+    }`}
+    style={{ 
+      gap: isMobile ? "16px" : "16px",
+      scrollSnapType: isMobile ? "x mandatory" : "none"
+    }}
+  >
+    {exploreItems.map((item, index) => (
+      <div 
+        key={index} 
+        className="flex-shrink-0 relative group" 
+        style={{ 
+          width: isMobile ? "220px" : "310px",
+          height: isMobile ? "300px" : "450px",
+          scrollSnapAlign: isMobile ? "start" : "none"
+        }}
+      >
+        <img
+          src={process.env.PUBLIC_URL + item.image}
+          alt={item.title}
+          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center">
+          <h3 className="font-['Arapey'] text-white text-sm md:text-lg tracking-widest uppercase drop-shadow-lg">
+            {item.title}
+          </h3>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+      <style jsx>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+    </section>
     </>
   );
 };
