@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header.js";
+import MainSection from "./components/MainSection.js";
+import ExploreSection from "./components/ExploreSection.js";
+import ShopStatus from "./components/ShopStatus.js";
+import JewelryOccasions from "./components/JewelryOccasions.js";
+import DiamondShapes from "./components/ShopByDiamondColor.js";
+import ShopByDiamondColor from "./components/ShopByDiamondColor.js";
+import MonroiSection from "./components/MonroiSection.js";
+import ShopByMaterial from "./components/ShopByMaterial.js";
+import LuxurySection from "./components/LuxurySection.js";
+import ShopByDiamond from "./components/ShopByDiamond.js";
+import MadeToOrder from "./components/MadeToOrder.js";
+import GetInspired from "./components/GetInspired.js";
+import DsCarePlan from "./components/DsCarePlan.js";
+import HeartFelt from "./components/HeartFelt.js";
+import Footer from "./components/Footer.js";
+
+
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+      <div>
+      <Header />
+      <MainSection/>
+      <ExploreSection/>
+      <ShopStatus/>
+      <JewelryOccasions/>
+      <DiamondShapes/>
+      <MonroiSection/>
+      <ShopByMaterial/>
+      <LuxurySection/>
+      <ShopByDiamond/>
+      <MadeToOrder/>
+      <GetInspired/>
+      <DsCarePlan/>
+      <HeartFelt/>
+      <Footer/>
+
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App                                    
