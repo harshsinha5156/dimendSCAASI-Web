@@ -34,65 +34,64 @@ export default function ShopByDiamond() {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:flex justify-center gap-10 flex-wrap">
-        {diamonds.map((diamond, idx) => (
-          <div
-            key={idx}
-            className="relative group w-20 h-20 lg:w-24 lg:h-24"
-          >
-            <img
-              src={diamond.img}
-              alt={diamond.name}
-              className="w-full h-full object-contain cursor-pointer transition-opacity duration-300 group-hover:opacity-0"
-            />
-            <div
-              className="absolute inset-0 flex items-center justify-center 
-              text-gray-800 text-xs md:text-sm font-medium opacity-0 group-hover:opacity-100 
-              transition duration-300 rounded-full text-center px-2"
-            >
-              {diamond.name}
-            </div>
-          </div>
-        ))}
+      <div className="hidden md:flex justify-center gap-12 flex-wrap">
+  {diamonds.map((diamond, idx) => (
+    <div
+      key={idx}
+      className="relative group w-14 h-14 lg:w-20 lg:h-20"
+    >
+      <img
+        src={diamond.img}
+        alt={diamond.name}
+        className="w-full h-full object-contain cursor-pointer transition-opacity duration-300 group-hover:opacity-0"
+      />
+      <div
+        className="absolute inset-0 flex items-center justify-center 
+        text-gray-800 text-xs md:text-sm font-medium opacity-0 group-hover:opacity-100 
+        transition duration-300 rounded-full text-center px-2"
+      >
+        {diamond.name}
       </div>
+    </div>
+  ))}
+</div>
+
 
       {/* Mobile Swiper */}
-      <div className="md:hidden px-6">
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={20}
-          pagination={{ clickable: true }}
-          modules={[Pagination]}
-        >
-          {diamonds.map((diamond, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="relative group w-20 h-20 mx-auto">
-                <img
-                  src={diamond.img}
-                  alt={diamond.name}
-                  className="w-full h-full object-contain cursor-pointer transition-opacity duration-300 group-hover:opacity-0"
-                />
-                <div
-                  className="absolute inset-0 flex items-center justify-center 
-                  text-gray-800 text-xs font-medium opacity-0 group-hover:opacity-100 
-                  transition duration-300 text-center px-1"
-                >
-                  {diamond.name}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+     <div className="md:hidden px-6">
+  <Swiper
+    slidesPerView={3}
+    spaceBetween={20}
+    pagination={{ clickable: true }}
+    modules={[Pagination]}
+  >
+    {diamonds.map((diamond, idx) => (
+      <SwiperSlide key={idx}>
+        <div className="relative group w-20 h-20 mx-auto">
+          <img
+            src={diamond.img}
+            alt={diamond.name}
+            className="w-full h-full object-contain cursor-pointer"
+          />
+          {/* Name below image */}
+          <div className="mt-2 text-center text-gray-800 text-xs font-medium">
+            {diamond.name}
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
-        {/* dots niche */}
-        <style jsx global>{`
-          .swiper-pagination {
-            position: relative !important;
-            margin-top: 16px;
-            text-align: center;
-          }
-        `}</style>
-      </div>
+  {/* dots niche */}
+  <style jsx global>{`
+    .swiper-pagination {
+      position: relative !important;
+      margin-top: 40px; /* thoda aur niche */
+      text-align: center;
+    }
+  `}</style>
+</div>
+
     </section>
   );
 }

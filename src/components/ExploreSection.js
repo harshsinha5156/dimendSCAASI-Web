@@ -43,7 +43,7 @@ const ExploreSection = () => {
   // Scroll function for buttons
   const handleScroll = (direction) => {
     const container = scrollContainerRef.current;
-    const scrollAmount = isMobile ? 240 : 320 + 32; // mobile: 1 card width
+    const scrollAmount = isMobile ? 240 : 320 + 32; 
     container.scrollBy({
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth'
