@@ -32,16 +32,16 @@ const MonroiSection = () => {
       price: "STARTING AT $1,300",
     },
     {
-      title: "STUD EARRING",
+      title: "TORI BAND ",
       image: "/images/shopby19.webp",
       hoverImage: "/images/ring5.webp",
-      price: "STARTING AT $450",
+      price: "STARTING AT $2100",
     },
     {
-      title: "DIAMOND BRACELET",
+      title: "LADY LUXE RING ",
       image: "/images/shopby50.webp",
       hoverImage: "/images/ring6.webp",
-      price: "STARTING AT $3,200",
+      price: "STARTING AT $2,800",
     },
   ];
 
@@ -182,10 +182,10 @@ const MonroiSection = () => {
                   />
                 </div>
 
-                <h3 className="mt-4 text-sm md:text-base font-semibold tracking-wide uppercase">
+                <h3 className="mt-4 text-sm md:text-xl  tracking-wide uppercase">
                   {item.title}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-600 mt-1">
+                <p className="text-xs md:text-sm mt-5 text-gray-600 mt-1">
                   {item.price}
                 </p>
               </div>

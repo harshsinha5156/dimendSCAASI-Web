@@ -85,7 +85,7 @@ const GetInspired = () => {
             className="absolute top-0 left-0 h-full bg-black transition-all duration-300"
             style={{ width: '0%' }}
           />
-          <div className="absolute right-0 -top-3 flex gap-3">
+          <div className="absolute right-0 -top-4 flex gap-3">
             <button 
               onClick={() => handleScroll('left')}
               className="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center bg-white hover:bg-black hover:text-white transition-colors duration-300"
@@ -113,7 +113,7 @@ const GetInspired = () => {
     className={`flex scroll-smooth hide-scrollbar ${
       isMobile 
         ? "overflow-x-scroll mx-auto w-[300px]" 
-        : "overflow-hidden justify-center pl-[300px]" // 👈 desktop pe left side gap
+        : "overflow-hidden justify-center pl-[300px]" 
     }`}
     style={{ 
       gap: isMobile ? "16px" : "16px",
@@ -138,7 +138,7 @@ const GetInspired = () => {
           decoding="async"
         />
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center">
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center mb-8">
           <h3 className="font-['Arapey'] text-white text-sm md:text-lg tracking-widest uppercase drop-shadow-lg">
             {item.title}
           </h3>
@@ -163,3 +163,8 @@ const GetInspired = () => {
 };
 
 export default GetInspired;
+
+
+
+
+

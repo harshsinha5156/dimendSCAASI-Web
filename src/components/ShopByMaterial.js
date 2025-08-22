@@ -139,7 +139,7 @@ const GetInspired = () => {
           decoding="async"
         />
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center">
+        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-center mb-8">
           <h3 className="font-['Arapey'] text-white text-sm md:text-lg tracking-widest uppercase drop-shadow-lg">
             {item.title}
           </h3>

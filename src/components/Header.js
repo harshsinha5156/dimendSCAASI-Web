@@ -23,14 +23,14 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const navLinks = [
-    { label: "Engagement Rings", href: "#" },
-    { label: "Wedding Rings", href: "#" },
-    { label: "Diamonds", href: "#" },
-    { label: "Gemstones", href: "#" },
-    { label: "Jewelry", href: "#" },
-    { label: "Gifts", href: "#" },
-    { label: "Watches", href: "#" },
-    { label: "About", href: "#" },
+    { label: "ENGAGEMENT RINGS", href: "#" },
+    { label: "WEDDING RINGS", href: "#" },
+    { label: "DIAMONDS", href: "#" },
+    { label: "GEMSTONES", href: "#" },
+    { label: "JEWELRY", href: "#" },
+    { label: "GIFTS", href: "#" },
+    { label: "WATCHES", href: "#" },
+    { label: "ABOUT", href: "#" },
   ];
 
   return (
@@ -189,3 +189,11 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+
