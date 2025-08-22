@@ -227,95 +227,101 @@ const MonroiSection = () => {
         </div>
 
         {/* Center text for desktop */}
-        <div className="absolute inset-0 hidden md:flex flex-col justify-center items-center text-center text-white px-4">
-          <h1 className="text-3xl md:text-3xl font-['Arapey'] mb-4 leading-snug">
-            DESIGN YOUR OWN RING
-          </h1>
-          <p className="text-[10px] md:text-base max-w-xl mb-6 leading-relaxed">
-            With a commitment to both sustainability and tradition, we <br /> offer
-            a diverse selection of lab and mined diamonds <br /> Chicago customers
-            can choose from with confidence.
-          </p>
+       <div className="absolute inset-0 hidden md:flex flex-col justify-center items-center text-center text-white px-4">
+  <h1 className="text-3xl md:text-3xl font-['Arapey'] mb-4 leading-snug">
+    DESIGN YOUR OWN RING
+  </h1>
+  <p className="text-[10px] md:text-base max-w-xl mb-6 leading-relaxed">
+    With a commitment to both sustainability and tradition, we <br /> offer
+    a diverse selection of lab and mined diamonds <br /> Chicago customers
+    can choose from with confidence.
+  </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col gap-4 w-full max-w-xs">
-            <button className="px-6 py-3 bg-white text-black font-medium uppercase rounded hover:bg-gray-200 transition w-full">
-              START WITH A SETTING
-            </button>
+  {/* Buttons */}
+  <div className="flex flex-col gap-3 w-full max-w-[250px]">
+    <button className="px-4 py-2 bg-white text-black font-xs uppercase hover:bg-gray-200 transition w-full">
+      START WITH A SETTING
+    </button>
 
-            {/* Dropdown */}
-            <div
-              className="relative w-full"
-              onMouseEnter={() => setShowDiamondOptions(true)}
-              onMouseLeave={() => setShowDiamondOptions(false)}
-            >
-              <button className="px-6 py-3 bg-white text-black font-medium uppercase rounded hover:bg-gray-200 transition w-full">
-                START WITH A DIAMOND ▼
-              </button>
+    {/* Dropdown */}
+   <div
+      className="relative w-full"
+      onMouseEnter={() => setShowDiamondOptions(true)}
+      onMouseLeave={() => setShowDiamondOptions(false)}
+    >
+      <button className="px-4 py-2 bg-white text-black font-xs uppercase hover:bg-gray-200 transition w-full">
+        START WITH A DIAMOND ▼
+      </button>
 
-              {showDiamondOptions && (
-                <div className="absolute top-full left-0 mt-2 flex flex-col bg-white text-black rounded shadow-lg w-full z-10">
-                  <button className="px-6 py-2 hover:bg-gray-100">LAB</button>
-                  <button className="px-6 py-2 hover:bg-gray-100">NATURAL</button>
-                  <button className="px-6 py-2 hover:bg-gray-100">
-                    LAB COLORED
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
+      {showDiamondOptions && (
+        <div className="absolute top-full left-0 mt-2 flex flex-col bg-white text-black  shadow-lg w-full z-10">
+          <button className="px-4 py-2 hover:bg-gray-100">LAB</button>
+           <div className="w-full border-b border-gray-300 mt-2"></div>
+          <button className="px-4 py-2 hover:bg-gray-100">NATURAL</button>
+           <div className="w-full border-b border-gray-300 mt-2"></div>
+          <button className="px-4 py-2 hover:bg-gray-100">LAB COLORED</button>
+           <div className="w-full border-b border-gray-300 mt-2"></div>
         </div>
-
-        {/* Mobile Layout */}
-        <div className="flex flex-col md:hidden text-center text-black mt-6 px-4">
-          <h1 className="text-2xl font-['Arapey'] mb-3">
-            DESIGN YOUR OWN RING
-          </h1>
-          <p className="text-sm leading-relaxed mb-4">
-            With a commitment to both sustainability and tradition, we offer a
-            diverse selection of lab and mined diamonds Chicago customers can
-            choose from with confidence.
-          </p>
-
-          <div className="flex flex-col gap-3 mb-6">
-            <button className="px-6 py-3 bg-white text-black border border-black font-medium uppercase rounded hover:bg-gray-100 transition">
-              START WITH A SETTING
-            </button>
-
-            <div className="relative w-full">
-  <button
-    onClick={() => setShowDiamondOptions(!showDiamondOptions)}
-    className="flex items-center justify-between px-6 py-3 bg-white text-black border border-black font-medium uppercase rounded hover:bg-gray-100 transition w-full"
-  >
-    <span>START WITH A DIAMOND</span>
-    <img
-      src="/icons/downicon.png"
-      alt="Down"
-      className={`w-4 h-4 ml-2 transition-transform duration-300 ${
-        showDiamondOptions ? "rotate-180" : "rotate-0"
-      }`}
-    />
-  </button>
-
-  {showDiamondOptions && (
-    <div className="absolute top-full left-0 mt-2 flex flex-col bg-white text-black rounded shadow-lg w-full z-10">
-      <button className="px-6 py-2 hover:bg-gray-100">LAB</button>
-      <button className="px-6 py-2 hover:bg-gray-100">NATURAL</button>
-      <button className="px-6 py-2 hover:bg-gray-100">LAB COLORED</button>
+      )}
     </div>
-  )}
+  </div>
 </div>
 
-          </div>
 
-          <div className="w-full h-[300px]">
-            <img
-              src="/images/shopby52.webp"
-              alt="Right Mobile"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Mobile Layout */}
+       <div className="flex flex-col md:hidden text-center text-black mt-6 px-2  max-w-[90%] text-center mx-auto  ">
+  <h1 className="text-2xl font-['Arapey'] mb-3">
+    DESIGN YOUR OWN RING
+  </h1>
+  <p className="text-sm leading-relaxed mb-4">
+    With a commitment to both sustainability and tradition, we offer a
+    diverse selection of lab and mined diamonds Chicago customers can
+    choose from with confidence.
+  </p>
+
+  <div className="flex flex-col gap-3 mb-6">
+    <button className="px-6 py-3 bg-white text-black border border-black font-sm uppercase  hover:bg-gray-100 transition">
+      START WITH A SETTING
+    </button>
+
+    <div className="relative w-full">
+      <button
+        onClick={() => setShowDiamondOptions(!showDiamondOptions)}
+        className="flex items-center justify-between px-6 py-3 bg-white  text-black border border-black font-sm uppercase  hover:bg-gray-100 transition w-full"
+      >
+        <span>START WITH A DIAMOND</span>
+        <img
+          src="/icons/downicon.png"
+          alt="Down"
+          className={`w-7 h-7 mr-4 ml-2 transition-transform duration-300 ${
+            showDiamondOptions ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
+
+      {showDiamondOptions && (
+        <div className="absolute top-full left-0 mt-2 flex flex-col bg-white text-black rounded shadow-lg w-full z-10">
+          <button className="px-6 py-2 hover:bg-gray-100">LAB</button>
+          <button className="px-6 py-2 hover:bg-gray-100">NATURAL</button>
+          <button className="px-6 py-2 hover:bg-gray-100">LAB COLORED</button>
         </div>
+      )}
+    </div>
+  </div>
+  <div className="w-full h-[300px] mt-6 flex justify-center">
+  <img
+    src="/images/shopby52.webp"
+    alt="Right Mobile"
+    className="w-full max-w-[100%] h-full object-cover"
+  />
+</div>
+
+
+
+</div>
+
+
+
       </section>
     </div>
   );

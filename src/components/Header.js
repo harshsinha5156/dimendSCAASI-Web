@@ -44,13 +44,14 @@ const Header = () => {
           <span>1200+ Reviews</span>
         </div>
 
-        <p className="text-center mx-2 sm:mx-0">
-          Our Biggest Sale of the Year.{" "}
-          <a href="#" className="underline hover:text-gray-200 transition">
-            Sign up
-          </a>{" "}
-          for details.
-        </p>
+       <p className="text-center mx-auto px-2 sm:px-0">
+  Our Biggest Sale of the Year.{" "}
+  <a href="#" className="underline hover:text-gray-200 transition">
+    Sign up
+  </a>{" "}
+  for details.
+</p>
+
 
         <div className="hidden sm:flex items-center gap-1 mr-7">
   {/* Instagram */}

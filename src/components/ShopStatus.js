@@ -45,9 +45,9 @@ const ShopStatus = () => {
 
   return (
     <section className="w-full bg-white py-6 md:py-12 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Desktop Layout with increased horizontal gap */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"> {/* Changed gap-8 to gap-12 */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14"> {/* Changed gap-8 to gap-12 */}
           {statusItems.map((item, index) => (
             <div key={index} className="text-center flex flex-col items-center">
               <div className="mb-6 w-20 h-20 flex items-center justify-center rounded-full overflow-hidden bg-gray-100 p-2">

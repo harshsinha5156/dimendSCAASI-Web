@@ -60,7 +60,7 @@ const GetInspired = () => {
   };
 
   return (
-    <section className="w-full overflow-hidden py-6 md:py-12 mt-4 md:mt-8 font-['Arapey']">
+    <section className="w-full overflow-hidden py-6 md:py-12  font-['Arapey']">
       {/* Heading */}
       <div className="mb-6 md:mb-10 flex justify-center">
         <h2 className="font-['Arapey'] text-2xl md:text-3xl leading-[1.2] text-black text-center">

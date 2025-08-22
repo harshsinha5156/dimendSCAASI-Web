@@ -30,7 +30,7 @@ export default function LuxurySection() {
             timeless classics to modern masterpieces and limited editions.
           </p>
          <button
-  className="w-full sm:w-[280px] md:w-[320px] px-10 py-2 bg-white text-black border border-black font-medium uppercase hover:bg-gray-200 transition text-sm sm:text-base md:text-lg"
+  className="w-full sm:w-[280px] md:w-[320px] px-8 py-2 bg-white text-black border border-black font-medium uppercase hover:bg-gray-200 transition text-xs xs:text-base md:text-lg"
 >
   SHOP WATCHES
 </button>
@@ -38,17 +38,17 @@ export default function LuxurySection() {
         </div>
 
         {/* ✅ Mobile Content Only */}
-        <div className="absolute bottom-6 left-0 right-0 px-6 text-center text-white md:hidden">
+        <div className="absolute bottom-6 left-0 right-0 px-6  text-center text-white md:hidden">
           <h2 className="text-xl sm:text-2xl font-['Arapey'] mb-2">
             BEST LUXURY WATCHES
           </h2>
           <p className="mb-4 text-xs sm:text-sm leading-relaxed">
-            Explore our stunning collection of luxury watches,
-            timeless classics and modern masterpieces.
+            Explore our stunning collection of luxury watches, from <br/>
+            timeless classics and modern masterpieces and limited <br/> editions.
           </p>
           <button
             className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-white text-black border border-black 
-            font-medium uppercase hover:bg-gray-200 transition text-xs sm:text-sm"
+            font-medium uppercase hover:bg-gray-200 transition text-xs sm:text-xs"
           >
             SHOP WATCHES
           </button>

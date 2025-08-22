@@ -117,14 +117,19 @@ const HeartFelt = () => {
         </div>
 
         {/* ✅ Mobile */}
-        <div className="block md:hidden w-full relative overflow-hidden">
-          <img src="/images/reviewmobile.webp" alt="Mobile Top" className="w-full h-[820px] object-cover" />
-          <img
-            src="/images/reviewmobilecenter.webp"
-            alt="Mobile Bottom"
-            className="absolute top-[350px] left-1/2 transform -translate-x-1/2 w-[80%] h-[450px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
+       <div className="block md:hidden w-full relative overflow-hidden">
+  <img
+    src="/images/reviewmobile.webp"
+    alt="Mobile Top"
+    className="w-full h-[820px] object-cover"
+  />
+  <img
+    src="/images/reviewmobilecenter.webp"
+    alt="Mobile Bottom"
+    className="absolute top-[43%] left-1/2 transform -translate-x-1/2 w-4/5 max-w-[500px] h-auto object-cover rounded-lg shadow-lg"
+  />
+</div>
+
       </section>
 
       {/* ================= MOBILE FOOTER SECTION ================= */}
